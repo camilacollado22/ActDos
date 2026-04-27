@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    font-family: Arial;
+}
+html, body {
+    height: 100%;
+}
+
+/* ===== HEADER FIJO ===== */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: lightgray;
+    text-align: center;
+    padding: 1rem;
+    z-index: 1000; /* evita que se mezcle con el contenido */
+}
+
+/* ===== FOOTER FIJO ===== */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: lightgray;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+main {
+    margin-top: 80px;   /* espacio para el header fijo */
+    margin-bottom: 80px; /* espacio para el footer fijo */
+    padding: 2rem;
+}
+
+/* ===== RECETAS ===== */
+.receta {
+    background: #eee;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+}
+
+/* ===== CONTENEDOR DE IMAGEN ===== */
+.img {
+    width: 60%;              /* no ocupa todo el ancho */
+    height: 30vh;            /* tamaño del recuadro */
+    margin: 1rem auto;       /* lo centra horizontalmente */
+    background: #ccc;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+form {
+    max-width: 500px;
+    margin: auto;
+    background: #eee;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    margin-top: 5px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 100px;
+}

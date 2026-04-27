@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+
+    /* 2 columnas */
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+
+    grid-template-areas:
+        "uno dos"
+        "tres cuatro"
+        "cinco seis";
+}
+
+.box1 { grid-area: uno; background: #c8d5c0; }
+.box2 { grid-area: dos; background: #e6d8a8; }
+.box3 { grid-area: tres; background: #e6b8b7; }
+.box4 { grid-area: cuatro; background: #e6b8b7; }
+.box5 { grid-area: cinco; background: #a8c0d8; }
+.box6 { grid-area: seis; background: #a8c0d8; }
+
+/* estilo general */
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.2rem solid black;
+    font-size: 2rem;
+}
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+
+        grid-template-areas:
+            "uno"
+            "tres"
+            "seis";
+    }
+
+    /* ocultamos los otros num*/
+    .box2,
+    .box4,
+    .box5 {
+        display: none;
+    }
+}

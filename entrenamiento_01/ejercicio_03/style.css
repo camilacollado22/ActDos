@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: lightgray;
+    text-align: center;
+    padding: 1rem 0;
+    z-index: 1000;
+}
+
+main {
+    margin-top: 6rem;
+    padding: 2rem;
+}
+
+/* RECETAS */
+.receta {
+    background: #ddd;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+}
