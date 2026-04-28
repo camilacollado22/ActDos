@@ -39,6 +39,16 @@ body {
 
 /* mobile */
 @media (max-width: 768px) {
+
+
+    .box6 {
+        background-color: pink;
+    }
+
+    .box5 {
+        background-color: lightblue;
+    }
+    
     .container {
         grid-template-columns: 1fr 1fr;
 

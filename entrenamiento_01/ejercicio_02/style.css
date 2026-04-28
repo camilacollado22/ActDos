@@ -6,7 +6,6 @@ html, body {
     height: 100%;
 }
 
-/* ===== HEADER FIJO ===== */
 header {
     position: fixed;
     top: 0;
@@ -14,10 +13,9 @@ header {
     background: lightgray;
     text-align: center;
     padding: 1rem;
-    z-index: 1000; /* evita que se mezcle con el contenido */
+    z-index: 1000;
 }
 
-/* ===== FOOTER FIJO ===== */
 footer {
     position: fixed;
     bottom: 0;
@@ -27,14 +25,12 @@ footer {
     padding: 1rem;
 }
 
-/* ===== CONTENIDO PRINCIPAL ===== */
 main {
-    margin-top: 80px;   /* espacio para el header fijo */
-    margin-bottom: 80px; /* espacio para el footer fijo */
+    margin-top: 80px;   
+    margin-bottom: 80px; 
     padding: 2rem;
 }
 
-/* ===== RECETAS ===== */
 .receta {
     background: #eee;
     padding: 2rem;
@@ -42,11 +38,10 @@ main {
     border-radius: 1rem;
 }
 
-/* ===== CONTENEDOR DE IMAGEN ===== */
 .img {
-    width: 60%;              /* no ocupa todo el ancho */
-    height: 30vh;            /* tamaño del recuadro */
-    margin: 1rem auto;       /* lo centra horizontalmente */
+    width: 60%;              
+    height: 30vh;            
+    margin: 1rem auto;       
     background: #ccc;
     border-radius: 0.5rem;
     overflow: hidden;
@@ -86,4 +81,13 @@ input, textarea {
 
 textarea {
     height: 100px;
+}
+
+/* colores botones */
+button[type="submit"] {
+    background-color: lightblue;
+}
+
+button[type="reset"] {
+    background-color: lightcoral;
 }

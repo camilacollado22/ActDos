@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -9,44 +11,108 @@ body {
 }
 
 .container {
-    height: 100vh;
+    height: 100%;
     display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-
-    grid-template-areas:
-        "uno uno dos cuatro"
-        "uno uno tres cuatro"
-        "cinco cinco seis seis";
+    grid-template-columns: 1fr 22% 22% 1fr;
+    grid-template-rows: 1fr 1fr 38.5%;
 }
 
-/* áreas */
-.box1 { grid-area: uno; background: #c8d5c0; }
-.box2 { grid-area: dos; background: #e6d8a8; }
-.box3 { grid-area: tres; background: #e6b8b7; }
-.box4 { grid-area: cuatro; background: #e6b8b7; }
-.box5 { grid-area: cinco; background: #a8c0d8; }
-.box6 { grid-area: seis; background: #a8c0d8; }
-
 .box {
+    border: 0.0625rem solid black;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 0.2rem solid black;
-    font-size: 2rem;
 }
-@media (max-width: 768px) {
-    .container {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, 1fr);
 
-        grid-template-areas:
-            "uno"
-            "dos"
-            "tres"
-            "cuatro"
-            "cinco"
-            "seis";
+
+.box1 {
+    background-color: #dcedc8;
+    grid-row: span 2;
+    order: 1;
+}
+
+.box2 {
+    background-color: #fff9c4;
+    order: 2;
+    grid-column: span 2;
+}
+
+.box3 {
+    background-color: #fff9c4;
+    order: 4;
+    grid-column: span 2;
+}
+
+.box4 {
+    background-color: #dcedc8;
+    grid-row: span 2;
+    order: 3;
+}
+
+.box5 {
+    background-color: #f1aeeb;
+    order: 5;
+    grid-column: span 2;
+}
+
+.box6 {
+    background-color: #a5bcfa;
+    order: 6;
+    grid-column: span 2;
+}
+
+/*tablet*/
+@media (max-width: 768px) {
+    * {
+        font-size: 1.4em;
     }
+
+    .container {
+    grid-template-columns: 2.5fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .box1, .box2, .box3, .box4, .box5, .box6 {
+        grid-column: span 1;
+        grid-row: span 1;
+    }   
+
+    .box2 {
+        background-color: #dcedc8;
+    }
+
+    .box4 {
+        background-color: #fff9c4;
+        order: 4;
+    }
+}
+
+
+
+/*MOBILE*/
+@media (max-width: 480px) {
+    * {
+        font-size: 1.2em;
+    }
+
+    /* cambio de color solo en esta vista */
+.box5 {
+        background-color: #aec6f1; /* celeste */
+    }
+
+    .box6 {
+        background-color: #faa5a5; /* rosa */
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-template-rows: repeat(6, auto); 
+    }
+
+    .box1 { order: 1; }
+    .box2 { order: 2; }
+    .box3 { order: 3; }
+    .box4 { order: 4; }
+    .box5 { order: 5; }
+    .box6 { order: 6; }
 }
